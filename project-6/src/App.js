@@ -1,10 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Synopsis from "./Synopsis.jsx";
+import SeriesInfo from "./SeriesInfo.jsx";
+import Episodes from "./Episodes.jsx";
+import Gallery from "./Gallery.jsx";
 
 function App() {
   return (
     <div>
- oh boy here we go again
+      <div id="synopsis">
+        <Synopsis />
+      </div>
+      <br></br>
+      <br></br>
+      <div id="series-info">
+        <SeriesInfo />
+      </div>
+      <br></br>
+      <br></br>
+      <div id="episodes">
+        <Episodes />
+      </div>
+      <br></br>
+      <br></br>
+      <div id="gallery">
+        <Gallery />
+      </div>
     </div>
   );
 }
