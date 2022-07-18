@@ -1,7 +1,0 @@
-[data-tab-content] {
-  display: none;
-}
-
-[data-tab-content].active {
-  display: none;
-}
