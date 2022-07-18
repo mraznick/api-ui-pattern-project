@@ -46,19 +46,25 @@ const [current, setCurrent] = useState(1)
       </nav>
 
       
-      <div className="content active-content" id="synopsis">
+      <div
+        className={current === 1 ? "content active-content" : "content"}
+        id="synopsis">
         <div><Synopsis /></div>
       </div>
 
-      <div className="content" id="series-info">
+      <div
+        className={current === 2 ? "content active-content" : "content"}
+        id="series-info">
         <div><SeriesInfo /></div>
       </div>
 
-      <div className="content" id="episodes">
+      <div className={current === 3 ? "content active-content" : "content"}
+        id="episodes">
         <div><Episodes /></div>
       </div>
 
-      <div className="content" id="art-gallery">
+      <div className={current === 4 ? "content active-content" : "content"}
+        id="art-gallery">
         <div><Gallery /></div>
       </div>
     </div>
