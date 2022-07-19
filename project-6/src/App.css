@@ -1,6 +1,6 @@
-* {
+/* * {
   border: 1px solid red;
-}
+} */
 
 #parent-div {
   min-height: 100vh;
@@ -45,6 +45,7 @@
 
 .active-content {
   height: 100%;
+  background-color:black;
 }
 
 .active-tab {
@@ -67,5 +68,28 @@
 
 #synopsis-component, #episodes-component, #gallery-component, #series-info-component {
   height: 100%;
+  width: 100%;
+}
+
+#synopsis-paragraph {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 75%;
+  color: greenyellow;
+  font-weight: 500;
+  margin-left: 20px;
+  /* include some animations here that type out the synopsis on load */
+}
+
+#synopsis-header {
+  color: greenyellow;
+  margin-left: 20px;
+}
+
+#synopsis-poster {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   width: 100%;
 }
