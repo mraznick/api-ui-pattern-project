@@ -49,23 +49,23 @@ const [current, setCurrent] = useState(1)
       <div
         className={current === 1 ? "content active-content" : "content"}
         id="synopsis">
-        <div><Synopsis /></div>
+        <div className="content-component" id="synopsis"><Synopsis /></div>
       </div>
 
       <div
         className={current === 2 ? "content active-content" : "content"}
         id="series-info">
-        <div><SeriesInfo /></div>
+        <div className="content-component" id="series-info"><SeriesInfo /></div>
       </div>
 
       <div className={current === 3 ? "content active-content" : "content"}
         id="episodes">
-        <div><Episodes /></div>
+        <div className="content-component" id="episodes"><Episodes /></div>
       </div>
 
       <div className={current === 4 ? "content active-content" : "content"}
         id="art-gallery">
-        <div><Gallery /></div>
+        <div className="content-component" id="gallery"><Gallery /></div>
         </div>
         </div>
 

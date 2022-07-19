@@ -1,6 +1,6 @@
 const Gallery = () => {
   return (
-    <div>
+    <div id="gallery-component">
       <h1>This is where a bunch of images will go</h1>
     </div>
   )
