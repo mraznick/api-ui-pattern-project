@@ -18,7 +18,7 @@ const [current, setCurrent] = useState(1)
     <div id="parent-div">
 
       <nav>
-
+{/* need to add routes to each tab, or content section instead? */}
         <div className="tabs-container">
           <div
             className={current === 1 ? "tab active-tab" : "tab"}
@@ -45,7 +45,7 @@ const [current, setCurrent] = useState(1)
 
       </nav>
 
-      
+      <div id="content-container">
       <div
         className={current === 1 ? "content active-content" : "content"}
         id="synopsis">
@@ -66,7 +66,10 @@ const [current, setCurrent] = useState(1)
       <div className={current === 4 ? "content active-content" : "content"}
         id="art-gallery">
         <div><Gallery /></div>
-      </div>
+        </div>
+        </div>
+
+
     </div>
   );
 };

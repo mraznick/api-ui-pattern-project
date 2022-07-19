@@ -1,0 +1,48 @@
+* {
+  border: 1px solid red;
+}
+
+#parent-div {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#content-container {
+  border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 800px;
+}
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 180px;
+  background: lightgray;
+  align-items: center;
+  justify-items: center;
+  margin-left: 50px;
+  height: 30px;
+}
+
+.content {
+  display: none;
+}
+
+.active-tab, .active-content {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.tabs-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 50px;
+}
