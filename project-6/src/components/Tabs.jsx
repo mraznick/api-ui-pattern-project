@@ -3,7 +3,7 @@ import SeriesInfo from "./SeriesInfo";
 import Episodes from "./Episodes";
 import Gallery from "./Gallery";
 import { useState } from "react";
-import "./App.css"
+import "../App.css"
 
 const Tabs = () => {
 

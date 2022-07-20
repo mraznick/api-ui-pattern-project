@@ -1,0 +1,21 @@
+/* #synopsis-paragraph {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 90%;
+  color: greenyellow;
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+#synopsis-header {
+  color: greenyellow;
+  margin-left: 20px;
+}
+
+#synopsis-poster {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+} */

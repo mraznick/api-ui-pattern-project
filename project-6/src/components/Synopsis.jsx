@@ -12,7 +12,7 @@ const Synopsis = () => {
     };
     apiSynopsisCall();
   });
-  
+
   useEffect(() => {
     const apiSynPosterCall = async () => {
       const pData = await axios("https://kitsu.io/api/edge/anime?filter[text]=cowboy%20bebop/characters")
