@@ -17,14 +17,13 @@
   flex-direction: column;
   height: 600px;
   width: 800px;
+  transform: translateY(-25%);
 }
 
 .tab {
   display: flex;
   flex-direction: column;
-  align-content: center;
   align-items: center;
-  justify-items: center;
   justify-content: center;
   width: 180px;
   background: lightgray;
@@ -38,14 +37,16 @@
   display: none;
 }
 
-.active-tab, .active-content {
+.active-tab,
+.active-content {
   display: flex;
-  flex-direction: column-reverse;
 }
 
 .active-content {
-  height: 100%;
-  background-color:black;
+  height: 800px;
+  background-color: black;
+  color: yellowgreen;
+  /* include some animations here that type out the synopsis on load */
 }
 
 .active-tab {
@@ -56,17 +57,22 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 50px;
+  justify-content: center;
+  height: 30px;
+  width: 100vw;
   padding: 0;
 }
 
 .content-component {
   display: flex;
   height: 100%;
-  width: inherit;
+  width: 100%;
 }
 
-#synopsis-component, #episodes-component, #gallery-component, #series-info-component {
+#synopsis-component,
+#episodes-component,
+#gallery-component,
+#series-info-component {
   height: 100%;
   width: 100%;
 }
@@ -75,11 +81,10 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 75%;
+  width: 90%;
   color: greenyellow;
   font-weight: 500;
   margin-left: 20px;
-  /* include some animations here that type out the synopsis on load */
 }
 
 #synopsis-header {

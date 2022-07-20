@@ -6,13 +6,21 @@ const Synopsis = () => {
   const [poster, setPoster] = useState("");
 
   useEffect(() => {
-    const apiCall = async () => {
+    const apiSynopsisCall = async () => {
       const data = await axios("https://kitsu.io/api/edge/anime/");
       setSynopsis(data.data.data[0].attributes.synopsis);
-      setPoster(data.data.data[0].attributes.coverImage.small)
     };
-    apiCall();
+    apiSynopsisCall();
   });
+  
+  useEffect(() => {
+    const apiSynPosterCall = async () => {
+      const pData = await axios("https://kitsu.io/api/edge/anime?filter[text]=cowboy%20bebop/characters")
+      setPoster(pData.data.data[2].attributes.coverImage.original)
+    };
+    apiSynPosterCall();
+  });
+
   return (
     <div id="synopsis-component">
       <h1 id="synopsis-header">Synopsis</h1>
