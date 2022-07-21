@@ -2,6 +2,10 @@
   border: 1px solid red;
 } */
 
+* {
+  font-family: 'Courier New', Courier, monospace
+}
+
 #parent-div {
   min-height: 100vh;
   width: 100vw;
@@ -11,13 +15,21 @@
   flex-wrap: wrap;
 }
 
+.sub-parent-div {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+
 #content-container {
   border: 1px solid green;
   display: flex;
   flex-direction: column;
-  height: 620px;
+  height: 650px;
   width: 800px;
-  transform: translateY(-25%);
 }
 
 .tab {
@@ -51,6 +63,7 @@
 
 .active-tab {
   background-color: darkgray;
+  font-weight: 600;
 }
 
 .tabs-container {
@@ -59,7 +72,6 @@
   align-items: center;
   justify-content: center;
   height: 30px;
-  width: 100vw;
   padding: 0;
 }
 
@@ -77,14 +89,18 @@
   width: 100%;
 }
 
+/*  */
+/* SYNOPSIS STYLES */
+/*  */
+
 #synopsis-paragraph {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 96%;
+  width: 100%;
   color: greenyellow;
   font-weight: 500;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 #synopsis-header {
@@ -94,29 +110,71 @@
 
 #synopsis-poster {
   display: flex;
+  float:inline-start;
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
 }
 
+/*  */
+/* EPISODE STYLES */
+/*  */
+
 #episode-poster {
   display: flex;
+  float: right;
   flex-direction: column;
   flex-wrap: wrap;
   height: 100%;
   width: 100%;
 }
 
-#ep-1-description {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 95%;
-}
-
 #episode-poster-container {
   display: flex;
+  float: right;
   flex-wrap: wrap;
-  height: 300px;
-  width: 211px;
+  height: 450px;
+  width: 361px;
+  padding: 10px;
+  transform:translateY(-8%);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.episode-text{
+  margin-left: 10px;
+}
+
+#episode-header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  transform: translateY(-75%);
+  margin-bottom: 10px;
+}
+
+/*  */
+/* GALLERY STYLES */
+/*  */
+
+#gallery-component {
+  border: 4px solid red;
+  display: flex;
+  flex-direction: row;
+}
+
+.gallery-posters {
+  border: 4px solid green;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+
+}
+
+#gallery-poster-three {
+  display: flex;
+  float: inline-end;
 }

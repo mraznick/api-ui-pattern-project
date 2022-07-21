@@ -2,48 +2,67 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 const Episodes = () => {
-  const [episodes, setEpisodes] = useState("");
-  const [poster, setPoster] = useState("");
-  const [description, setDescription] = useState("");
+  const [apiContent, setApiContent] = useState([]);
+  // const [episodes, setEpisodes] = useState("");
+  // const [poster, setPoster] = useState("");
+  // const [description, setDescription] = useState("");
 
   useEffect(() => {
     const apiEpCall = async () => {
       const data = await axios(
         "https://kitsu.io/api/edge/anime?filter[text]=cowboy%20bebop/episodes"
       );
-      setEpisodes(data.data.data[1].attributes.canonicalTitle);
+      setApiContent(data.data.data);
     };
     apiEpCall();
   });
 
-  useEffect(() => {
-    const apiEpPosterCall = async () => {
-      const data = await axios(
-        "https://kitsu.io/api/edge/anime?filter[text]=cowboy%20bebop/episodes"
-      );
-      setPoster(data.data.data[1].attributes.posterImage.medium);
-    };
-    apiEpPosterCall();
-  });
+  // useEffect(() => {
+  //   const apiEpPosterCall = async () => {
+  //     const data = await axios(
+  //       "https://kitsu.io/api/edge/anime?filter[text]=cowboy%20bebop/episodes"
+  //     );
+  //     setPoster(data.data.data[2].attributes.posterImage.medium);
+  //   };
+  //   apiEpPosterCall();
+  // });
 
-  useEffect(() => {
-    const apiEpSynCall = async () => {
-      const data = await axios(
-        "https://kitsu.io/api/edge/anime?filter[text]=cowboy%20bebop/episodes"
-      );
-      setDescription(data.data.data[1].attributes.description);
-    };
-    apiEpSynCall();
-  });
+  // useEffect(() => {
+  //   const apiEpSynCall = async () => {
+  //     const data = await axios(
+  //       "https://kitsu.io/api/edge/anime?filter[text]=cowboy%20bebop/episodes"
+  //     );
+  //     setDescription(data.data.data[2].attributes.description);
+  //   };
+  //   apiEpSynCall();
+  // });
 
   return (
     <div id="episodes-component">
-      <h1>Episodes</h1>
-      <h3>Session: {episodes}</h3>
+      <h1 className="episode-text">Episodes</h1>
+
+      <h3>
+        <em className="episode-text" id="episode-header">
+          Session:{" "}
+          {apiContent.length !== 0
+            ? apiContent[2].attributes.canonicalTitle
+            : ""}
+        </em>
+      </h3>
+
       <div id="episode-poster-container">
-        <img src={poster} id="episode-poster" />
+        <img
+          src={
+            apiContent.length !== 0
+              ? apiContent[2].attributes.posterImage.medium
+              : ""
+          }
+          id="episode-poster"
+        />
       </div>
-      <p id="ep-1-description">{description}</p>
+      <p className="episode-text" id="episode-description">
+        {apiContent.length !== 0 ? apiContent[2].attributes.description : ""}
+      </p>
     </div>
   );
 };
