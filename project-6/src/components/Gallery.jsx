@@ -5,14 +5,13 @@ const Gallery = () => {
   const [apiContent, setApiContent] = useState([]);
 
   useEffect(() => {
-    const apiPosterOneCall = async () => {
+    const apiPosterCall = async () => {
       const data = await axios(
         "https://kitsu.io/api/edge/anime?filter[text]=cowboy%20bebop/episodes"
       );
       setApiContent(data.data.data);
-      console.count("API");
     };
-    apiPosterOneCall();
+    apiPosterCall();
   }, []);
 
   return (

@@ -115,6 +115,23 @@
 }
 
 /*  */
+/* SERIES INFO STYLES */
+/*  */
+
+.info-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.info-header {
+  font-weight: 700;
+  font-size: large;
+  margin-bottom: 3px;
+}
+
+/*  */
 /* EPISODE STYLES */
 /*  */
 
@@ -157,6 +174,7 @@
 
 .gallery-top-container {
   display: flex;
+  margin-top: 10px;
   height: 50%;
   width: 100%;
 }
