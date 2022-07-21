@@ -3,9 +3,6 @@ import axios from "axios";
 
 const Episodes = () => {
   const [apiContent, setApiContent] = useState([]);
-  // const [episodes, setEpisodes] = useState("");
-  // const [poster, setPoster] = useState("");
-  // const [description, setDescription] = useState("");
 
   useEffect(() => {
     const apiEpCall = async () => {
@@ -17,25 +14,6 @@ const Episodes = () => {
     apiEpCall();
   });
 
-  // useEffect(() => {
-  //   const apiEpPosterCall = async () => {
-  //     const data = await axios(
-  //       "https://kitsu.io/api/edge/anime?filter[text]=cowboy%20bebop/episodes"
-  //     );
-  //     setPoster(data.data.data[2].attributes.posterImage.medium);
-  //   };
-  //   apiEpPosterCall();
-  // });
-
-  // useEffect(() => {
-  //   const apiEpSynCall = async () => {
-  //     const data = await axios(
-  //       "https://kitsu.io/api/edge/anime?filter[text]=cowboy%20bebop/episodes"
-  //     );
-  //     setDescription(data.data.data[2].attributes.description);
-  //   };
-  //   apiEpSynCall();
-  // });
 
   return (
     <div id="episodes-component">
