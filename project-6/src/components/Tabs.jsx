@@ -16,7 +16,6 @@ const Tabs = () => {
     <div id="parent-div">
       <div className="sub-parent-div">
         <nav>
-          {/* need to add routes to each tab, or content section instead? */}
           <div className="tabs-container">
             <div
               className={current === 1 ? "tab active-tab" : "tab"}
